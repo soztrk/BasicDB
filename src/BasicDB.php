@@ -291,7 +291,7 @@ class BasicDB extends \PDO
     {
         if (is_array($this->where) && count($this->where) > 0) {
             $this->sql .= ' WHERE ';
-            $where = [];
+            $where = array();
             foreach ($this->where as $key => $arg) {
 
                 if ($arg[2] == 'LIKE' || $arg[2] == 'NOT LIKE') {
